@@ -344,7 +344,7 @@ ul { list-style: none; }
   background: var(--oak);
 }
 
-.hero__title {
+/* .hero__title {
   font-family: var(--ff-display);
   font-size: clamp(3.5rem, 8vw, 7rem);
   font-weight: 700;
@@ -352,6 +352,24 @@ ul { list-style: none; }
   color: var(--cream);
   margin-bottom: 1.8rem;
   max-width: 800px;
+} */
+
+.hero-title{
+    font-family: 'Playfair Display', serif;
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: fadeUp 1.5s ease;
+
+    color: #E1306C; /* METAPHYSICAL */
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.45),
+        0 0 30px rgba(255,255,255,.08);
+}
+
+.hero-title span{
+    display: block;
+    color: #FCAF45; /* FURNITURE */
 }
 .hero__title-line { display: block; }
 .hero__title em {
@@ -826,8 +844,11 @@ ul { list-style: none; }
         0 0 30px rgba(255,255,255,.08);
 }
 
-.hero-title span{
+/* .hero-title span{
     color:#D8B26E;
+} */
+ .hero-title span{
+    color: #FCAF45;
 }
 
 .hero-small{
