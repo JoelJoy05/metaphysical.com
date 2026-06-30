@@ -45,24 +45,28 @@ function closeMobileMenu(){
 // Smooth scrolling for navigation links
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
     anchor.addEventListener("click", function (e) {
-
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const href = this.getAttribute("href");
+
+        if (href === "#hero") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            return;
+        }
+
+        const target = document.querySelector(href);
 
         if (target) {
-
             target.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
-
         }
-
     });
-
 });
 
 if ("serviceWorker" in navigator) {
