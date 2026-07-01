@@ -80,32 +80,37 @@ if ("serviceWorker" in navigator) {
 }
 const track = document.getElementById("galleryTrack");
 
-// Clone images continuously
-const items = [...track.children];
+// Only run the gallery marquee if the gallery section is present in the DOM
+if (track) {
 
-items.forEach(item => {
-    track.appendChild(item.cloneNode(true));
-});
+    // Clone images continuously
+    const items = [...track.children];
 
-let x = 0;
-const speed = 0.5;
+    items.forEach(item => {
+        track.appendChild(item.cloneNode(true));
+    });
 
-function loop(){
+    let x = 0;
+    const speed = 0.5;
 
-    x -= speed;
+    function loop(){
 
-    // Move track
-    track.style.transform = `translateX(${x}px)`;
+        x -= speed;
 
-    // Width of first half
-    if(Math.abs(x) >= track.scrollWidth / 2){
+        // Move track
+        track.style.transform = `translateX(${x}px)`;
 
-        x = 0;
+        // Width of first half
+        if(Math.abs(x) >= track.scrollWidth / 2){
+
+            x = 0;
+
+        }
+
+        requestAnimationFrame(loop);
 
     }
 
-    requestAnimationFrame(loop);
+    loop();
 
 }
-
-loop();
