@@ -33,15 +33,47 @@ if (quote) {
 }
 
 
+const nav = document.getElementById("nav");
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
+const navBackdrop = document.getElementById("navBackdrop");
 
-hamburger.onclick = () => {
-    mobileMenu.classList.toggle("open");
-};
+function openMobileMenu(){
+    if (mobileMenu) mobileMenu.classList.add("open");
+    if (hamburger) hamburger.classList.add("open");
+    if (navBackdrop) navBackdrop.classList.add("open");
+    if (nav) nav.classList.add("menu-open");
+}
 
 function closeMobileMenu(){
-    mobileMenu.classList.remove("open");
+    if (mobileMenu) mobileMenu.classList.remove("open");
+    if (hamburger) hamburger.classList.remove("open");
+    if (navBackdrop) navBackdrop.classList.remove("open");
+    if (nav) nav.classList.remove("menu-open");
+}
+
+if (hamburger) {
+    hamburger.onclick = () => {
+        mobileMenu.classList.contains("open") ? closeMobileMenu() : openMobileMenu();
+    };
+}
+
+// Tap the dimmed backdrop to dismiss the menu
+if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeMobileMenu);
+}
+
+// Give the nav a solid background once the user scrolls past the top of the hero
+if (nav) {
+    const setNavState = () => {
+        if (window.scrollY > 40) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    };
+    setNavState();
+    window.addEventListener("scroll", setNavState, { passive: true });
 }
 // Smooth scrolling for navigation links
 
