@@ -1,9 +1,10 @@
 const quotes = [
-    "Every masterpiece begins with exceptional vision.",
-    "Crafting spaces that inspire generations.",
-    "Where craftsmanship meets timeless elegance.",
+    "Strong Wood. Stronger Promise",
+    "Heavy On Quality. Light On Price",
+    "Chemically Treated Wood",
     "Designed with passion. Built with purpose.",
     "Creating environments that feel like home.",
+    "If It Breaks, We Fix It. But It Wont.",
     "Quality you can see. Excellence you can trust."
 ];
 
