@@ -356,7 +356,7 @@ ul { list-style: none; }
 
 .hero-title{
     font-family: 'Playfair Display', serif;
-    font-size: 90px;
+    font-size: clamp(2.375rem, 7vw, 5.625rem);
     line-height: 1;
     margin-bottom: 20px;
     animation: fadeUp 1.5s ease;
@@ -756,10 +756,6 @@ ul { list-style: none; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
 
-  .hero__title { font-size: clamp(2.8rem, 12vw, 4rem); }
-  .hero__badges { flex-wrap: wrap; gap: 1rem; }
-  .hero__scroll-hint { display: none; }
-
   .about__inner {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -778,9 +774,6 @@ ul { list-style: none; }
 }
 
 @media (max-width: 480px) {
-  .hero__content { padding: 7rem 1.25rem 4rem; }
-  .hero__title { font-size: 2.8rem; }
-  .hero__badges { padding: 1rem 1.25rem; gap: 1rem; }
   .btn { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
   .about { padding: 4rem 1.25rem; }
   .contact { padding: 4rem 1.25rem; }
@@ -866,7 +859,7 @@ ul { list-style: none; }
 
 .hero-title{
     font-family: 'Playfair Display', serif;
-    font-size: 90px;
+    font-size: clamp(2.375rem, 7vw, 5.625rem);
     line-height: 1;
     margin-bottom: 20px;
     animation: fadeUp 1.5s ease;
@@ -882,7 +875,7 @@ ul { list-style: none; }
 }
 
 .hero-tagline{
-    font-size: 30px;
+    font-size: clamp(1.05rem, 2.6vw, 1.875rem);
     font-weight: 500;
     color: #ffffff;                 /* Make it white */
     margin-top: 15px;
@@ -893,7 +886,7 @@ ul { list-style: none; }
 }
 
 .hero-quote{
-    font-size: 22px;
+    font-size: clamp(0.9rem, 2vw, 1.375rem);
     font-style: italic;
     color: rgba(255,255,255,.95);   /* Light white */
     max-width: 700px;
@@ -1031,14 +1024,6 @@ ul { list-style: none; }
         margin-top:-80px;
     }
 
-    .hero-title{
-        font-size:70px;
-    }
-
-    .hero-tagline{
-        font-size:24px;
-    }
-
 }
 
 
@@ -1094,8 +1079,6 @@ ul { list-style: none; }
 
 .hero-title{
 
-    font-size:52px;
-
     letter-spacing:2px;
 
     line-height:1.1;
@@ -1104,15 +1087,11 @@ ul { list-style: none; }
 
 .hero-tagline{
 
-    font-size:20px;
-
     margin-bottom:18px;
 
 }
 
 .hero-quote{
-
-    font-size:16px;
 
     line-height:1.7;
 
@@ -1244,24 +1223,6 @@ ul { list-style: none; }
 .hero-content{
 
     margin-top:0;
-
-}
-
-.hero-title{
-
-    font-size:38px;
-
-}
-
-.hero-tagline{
-
-    font-size:17px;
-
-}
-
-.hero-quote{
-
-    font-size:14px;
 
 }
 
